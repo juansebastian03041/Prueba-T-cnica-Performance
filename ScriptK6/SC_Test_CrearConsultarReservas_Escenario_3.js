@@ -5,7 +5,7 @@ import { SharedArray } from 'k6/data'; // Importar SharedArray para cargar y com
 // Cargar datos desde el archivo el cual contine la data para el flujo de crear una reserva.
 // SharedArray se asegura de cargar los datos una vez y compartirlos entre todos los VUs.
 const data = new SharedArray('Cargar datos de clientes', () =>
-    open('D:\\Otros_Datos\\SREYES\\Prueba\\Script-K6\\DT_Clientes_ficticios_1.txt')
+    open('D:\\Otros_Datos\\SREYES\\Prueba\\ScriptK6\\DT_Clientes_ficticios_1.txt')
         .split('\n') // Dividir el archivo en líneas.
         .map((line) => line.split(',')) // Dividir cada línea en columnas (asumiendo que están separadas por comas).
 );
